@@ -1,0 +1,14 @@
+version: '3.4'
+
+services:
+  postservice:
+    image: ${DOCKER_REGISTRY-}postservice
+    build:
+      context: .
+      dockerfile: PostService/Dockerfile
+
+  userservice:
+    image: ${DOCKER_REGISTRY-}userservice
+    build:
+      context: .
+      dockerfile: UserService/Dockerfile
